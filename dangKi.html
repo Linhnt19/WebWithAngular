@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Ký</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .register-container {
+            background: #fff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .register-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .register-container .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .register-container input[type="text"],
+        .register-container input[type="email"],
+        .register-container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        .register-container input[type="text"]:focus,
+        .register-container input[type="email"]:focus,
+        .register-container input[type="password"]:focus {
+            border-color: #764ba2;
+        }
+
+        .register-container .input-group i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #34e89e, #0f3443);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .register-container button:hover {
+            background: linear-gradient(135deg, #0f3443, #34e89e);
+        }
+
+        .register-container .login-link {
+            display: block;
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .register-container .login-link:hover {
+            color: #764ba2;
+        }
+        .link-group{
+            display: flex; justify-content: space-between; align-items: center;
+            justify-content: center
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2>Đăng Ký</h2>
+        <form action="#">
+            <div class="input-group">
+                <input type="text" placeholder="Tên đầy đủ" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="email" placeholder="Email" required>
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Mật khẩu" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" placeholder="Nhập lại mật khẩu" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <button type="submit">Đăng Ký</button>
+            <div class="link-group">
+                <a href="#" class="login-link">Đã có tài khoản? </a>
+            <a href="login.html" class="login-link"> Đăng nhập</a>
+            </div>
+            
+        </form>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

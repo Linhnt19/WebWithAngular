@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi" ng-app="loginApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Nhập</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .login-container .input-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+            transition: border-color 0.3s;
+        }
+
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #764ba2;
+        }
+
+        .login-container .input-group i {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .login-container .button-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .login-container a.button-link {
+            width: 48%;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .login-container .login-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .login-container .login-button:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+        }
+
+        .login-container .register-button {
+            background: linear-gradient(135deg, #34e89e, #0f3443);
+        }
+
+        .login-container .register-button:hover {
+            background: linear-gradient(135deg, #0f3443, #34e89e);
+        }
+
+        .login-container .google-btn {
+            width: 100%;
+            padding: 15px;
+            background: #4285F4;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s;
+            margin-top: 20px;
+        }
+
+        .login-container .google-btn:hover {
+            background: #357ae8;
+        }
+
+        .login-container .google-btn img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .login-container .forgot-password {
+            display: block;
+            margin-top: 15px;
+            color: #666;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .login-container .forgot-password:hover {
+            color: #764ba2;
+        }
+    </style>
+</head>
+<body ng-controller="LoginController">
+    <div class="login-container">
+        <h2>Đăng Nhập</h2>
+        <form id="login-form" ng-submit="login()">
+            <div class="input-group">
+                <input type="text" ng-model="username" placeholder="Tên đăng nhập" required>
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="input-group">
+                <input type="password" ng-model="password" placeholder="Mật khẩu" required>
+                <i class="fas fa-lock"></i>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="login-button">Đăng Nhập</button>
+                <a href="dangKi.html" class="button-link">
+                    <button type="button" class="register-button">Đăng Ký</button>
+                </a>
+            </div>
+            <button type="button" class="google-btn" id="google-signin-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google logo">
+                Đăng nhập với Google
+            </button>
+            <a href="#" class="forgot-password">Quên mật khẩu?</a>
+        </form>
+    </div>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!-- Google API -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        // AngularJS app and controller
+        var apiUrlLogin ="http://localhost:3000/account";
+        var app = angular.module('loginApp', []);
+        app.controller('LoginController', function($scope, $http) {
+            $scope.accounts = [];
+            $http.get(apiUrlLogin).then(function(res){
+                $scope.accounts =res.data
+            })
+
+            $scope.login = function() {
+                var user = $scope.accounts.find(function(account) {
+                    return account.name === $scope.username && account.pass === $scope.password;
+                });
+
+                if (user) {
+                    if (user.role === 1) {
+                        return document.location = 'index.html';
+                    } else if (user.role === 0) {
+                        return document.location = 'index2.html';
+                    }
+                } else {
+                    alert('Tên đăng nhập hoặc mật khẩu không chính xác.');
+                }
+            };
+        });
+
+        // Google Sign-In
+        function handleCredentialResponse(response) {
+            console.log('Encoded JWT ID token: ' + response.credential);
+            // Gửi token đến máy chủ của bạn và xác thực người dùng tại đây.
+        }
+
+        window.onload = function () {
+            google.accounts.id.initialize({
+                client_id: 'YOUR_CLIENT_ID.apps.googleusercontent.com',
+                callback: handleCredentialResponse
+            });
+
+            google.accounts.id.renderButton(
+                document.getElementById("google-signin-btn"),
+                { theme: "outline", size: "large" }
+            );
+
+            google.accounts.id.prompt(); // Hiển thị One Tap dialog
+        };
+    </script>
+</body>
+</html>

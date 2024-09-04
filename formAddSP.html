@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="/SD18403/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4" ng-controller="addSPCtrl">
+                <span>
+                    <h4>Thông tin sản phẩm</h4>
+                </span>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Id sản phẩm" ng-model="id">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hình ảnh" ng-model="img">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tên sản phẩm" ng-model="name">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Chủng loại" ng-model="gener">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Số lượng" ng-model="quantity">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Giá bán" ng-model="price">
+                </div>
+                
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Giảm giá" ng-model="sale">
+                </div>
+
+                
+                <button type="button" class="btn btn-primary btn-sm" ng-click="addSP()">Thêm sản phẩm</button>
+            </div>
+            <div class="col-md-8" ng-controller="ProductHot">
+                <div class="row2" style="margin-left: 20px;">
+                    <div class="row">
+                        <h4>Danh sách sản phẩm</h4>
+                        <hr>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col" colspan="4">Hình</th>
+                                    <th scope="col" colspan="4">Thông tin sản phẩm</th>
+                                    <th scope="col" colspan="1">Chủng loại</th>
+                                    <th scope="col" colspan="1">Số lượng</th>
+                                    <th scope="col" colspan="1">Đơn giá</th>
+                                    <th scope="col" colspan="1">Giảm giá</th>
+                                    
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="i in listProductHot">
+                                    <th colspan="4"><img src="{{i.img}}" alt="" height="70px"></th>
+                                    <td colspan="4" >{{i.name}}</td>
+                                    <td>{{i.gener}}</td>
+                                    <td>{{i.quantity}}</td>
+                                    <td>{{i.price}}</td>
+                                    <td>{{i.sale}}</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+
+                    
+
+                </div>
+            </div>  
+        </div>
+          
+
+    </div>
+    <script src="route.js"></script>
+    <script src="./controller/product_hot.js"></script>
+</body>
+
+</html>

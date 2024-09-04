@@ -1,0 +1,120 @@
+header{
+    height: 40px;
+    background-color: black;
+    color: aliceblue;
+    padding-top: 7px;
+    padding-left: 10px;
+}
+p{
+    font-size: 14px;
+}
+.nav-item2{
+    margin-left: 300px;
+}
+p{
+    text-align: justify;
+}
+.carousel-item>img{
+    height: 400px;
+    
+}
+/* css lien he */
+.slide2{
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+   
+}
+.contact{
+    height: 350px;
+    border: 1px solid gainsboro;
+    
+}
+.contact>.col-md-6{
+    padding-top: 15px;
+}
+footer{
+    height: 50px;
+    background-color: cornsilk;
+    border: 1px solid gainsboro;
+    text-align: center;
+    padding-top: 10px;
+    /*
+    bo goc 
+    border-radius: 10px;
+    */
+    
+}
+.introduce>.row>.col-md-6{
+    margin-top: 20px;
+}
+/* css gio hang */
+.cart{
+    
+    
+    /* margin-left: 15px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr ; /* Chia header thành hai cột */
+    /* align-items: center; : chia giua cua div */
+    
+}
+
+.cart-form>.row>.row1>.row{
+    
+    padding-right: 40px;
+}
+.cart-form>.row>.row2{
+    border-left: 1px solid gainsboro;
+    padding-left: 20px;
+}
+/* css san pham */
+.container-product{    
+     
+    /* margin-left: 15px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Chia header thành hai cột */
+    align-items: center; /* Căn các phần tử theo chiều dọc */
+    /* height: 200px; */
+}
+.product{
+    
+    
+    margin-top: 16px;
+    
+}
+.imfomation{
+    height: 50px;
+    text-align: center;
+    padding-top: 10px;
+    
+    
+}
+.imfomation2{
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    
+    
+}
+.img-product{
+    height: 350px;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer{
+    height: 50px;
+    background-color: black;
+    border: 1px solid gainsboro;
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+    /*
+    bo goc 
+    border-radius: 10px;
+    */
+    
+}

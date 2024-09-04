@@ -1,0 +1,172 @@
+{
+  "product_hot": [
+    {
+      "img": "./images2/aoKhac1.jpg",
+      "name": "Áo Polo Cá Sấu Thêu Chữ Ký",
+      "gener": "Áo Polo",
+      "quantity": 99,
+      "price": 42500,
+      "sale": 500,
+      "id": "PH01"
+    },
+    {
+      "img": "./images2/quanBlack.jpg",
+      "name": "Quần Vải Ống Cao Đen",
+      "gener": "Quần Vải đen",
+      "quantity": 99,
+      "price": 425,
+      "sale": 10,
+      "id": "PH02"
+    },
+    {
+      "id": "PH03",
+      "img": "./images2/aoThunBlack.jpg",
+      "name": "Áo Thun Cổ Tròn Trơn From",
+      "price": 215,
+      "gener": "Áo Thun",
+      "quantity": 99,
+      "sale": 5
+    },
+    {
+      "id": "PH04",
+      "img": "./images2/aoKhac1.jpg",
+      "name": "test",
+      "price": 8,
+      "gener": "n",
+      "quantity": 6,
+      "sale": 8
+    }
+  ],
+  "product_new": [
+    {
+      "id": "TL167",
+      "img": "./images2/that1.jpg",
+      "name": "Thắt Lưng Đầu Kim ",
+      "price": 275,
+      "gener": "Thắt Lưng",
+      "quantity": 99,
+      "sale": 5
+    },
+    {
+      "id": "TL168",
+      "img": "./images2/that2.jpg",
+      "name": "Thắt Lưng Khóa Tự Động ",
+      "price": 275,
+      "gener": "Thắt Lưng",
+      "quantity": 99,
+      "sale": 5
+    },
+    {
+      "id": "TL169",
+      "img": "./images2/that3.jpg",
+      "name": "Thắt Lưng Khóa Tự Động",
+      "price": 275,
+      "gener": "Thắt Lưng",
+      "quantity": 99,
+      "sale": 5
+    },
+    {
+      "id": "TL170",
+      "img": "./images2/that4.jpg",
+      "name": "Thắt Lưng Khóa Tự Động",
+      "price": 275,
+      "gener": "Thắt Lưng",
+      "quantity": 99,
+      "sale": 5
+    }
+  ],
+  "product_sel": [
+    {
+      "img": "./images2/aovet.jpg",
+      "name": "Áo Polo Cá Sấu Thêu Chữ Ký",
+      "price": 315,
+      "gener": "Áo Polo",
+      "quantity": 99,
+      "sale": 5,
+      "id": "ff4b"
+    },
+    {
+      "img": "./images2/quanBlack.jpg",
+      "name": "Áo Polo Cá Sấu Thêu Chữ Ký",
+      "price": 425,
+      "gener": "Áo Polo",
+      "quantity": 99,
+      "sale": 5,
+      "id": "509e"
+    },
+    {
+      "img": "./images2/aoSomi.png",
+      "name": "Áo Thun Cổ Tròn Trơn From",
+      "price": 215,
+      "gener": "Áo Thun",
+      "quantity": 99,
+      "sale": 5,
+      "id": "fd70"
+    },
+    {
+      "img": "./images2/aoSomiDai.jpg",
+      "name": "Áo Polo Mắt Chim Cổ V",
+      "price": 241,
+      "gener": "Áo Thun",
+      "quantity": 99,
+      "sale": 5,
+      "id": "04d8"
+    }
+  ],
+  "gioHang": [
+    {
+      "id": "f2d2",
+      "img": "./images2/aoKhac1.jpg",
+      "name": "Áo Polo Cá Sấu Thêu Chữ Ký",
+      "price": 42500,
+      "quantity": 10
+    },
+    {
+      "id": "ff86",
+      "img": "./images2/aoKhac1.jpg",
+      "name": "Áo Polo Cá Sấu Thêu Chữ Ký",
+      "price": 42500,
+      "quantity": 1
+    }
+  ],
+  "danhMuc": [
+    {
+      "name": "HÀNG MỚI VỀ",
+      "id": "61b4"
+    },
+    {
+      "name": "QUẦN NAM",
+      "id": "3ab6"
+    },
+    {
+      "name": "ÁO NAM",
+      "id": "36ea"
+    },
+    {
+      "name": "PHỤ KIỆN",
+      "id": "d93f"
+    },
+    {
+      "name": "GIÀY DÉP",
+      "id": "dbd8"
+    },
+    {
+      "name": "OUTLET SALE",
+      "id": "a846"
+    }
+  ],
+  "account": [
+    {
+      "name": "test",
+      "pass": "1",
+      "role": 1,
+      "id": "985e"
+    },
+    {
+      "name": "test",
+      "pass": "2",
+      "role": 0,
+      "id": "80dd"
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-9 boder-prd">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img id="product-image" src="{{productHot.img}}" alt=""
+                            style="width: 75%;margin-top: 25px;margin-bottom: 25px;" ng-model="img2">
+                    </div>
+                    <div class="col-md-6" style="margin-top: 40px;">
+                        <h5 ng-model="name2">{{productHot.name}}</h5>
+                        <ul>
+
+                            <li ng-model="price2">Đơn giá: {{productHot.price}}</li>
+
+                            <li>Chủng loại: {{productHot.gener}}</li>
+                            <li>Hàng mới nhập</li>
+                            <li>Số lượng {{productHot.quantity}} cái</li>
+                            <li>Giảm giá: {{productHot.sale}}%</li>
+                        </ul>
+                        <hr>
+                        <div class="row">
+                            
+                            <div class="col-md-6">
+                                <div class="row">SIZE*</div>
+                                <form action="" name="CheckForm">
+                                <select class="form-select" name="txtSize" aria-label="Default select example" required>
+                                    
+                                    <option selected>S</option>
+                                    <option value="1">M</option>
+                                    <option value="2">L</option>
+                                    <option value="3">X</option>
+                                  </select>
+                                  <span ng-show="CheckForm.txtSize.$invalid">Chọn size phù hợp</span>
+                                
+                                  <div class="row">
+                                    <button type="button" class="btn btn-danger" style="margin-top: 10px">Đăng kí mua</button>
+                                  </div>
+                                </form>
+                            </div>
+                            <div class="col-md-6">
+                                
+                                <div class="row">SỐ LƯỢNG*</div>
+                                <form action="" name="CheckForm">
+                                    <input type="number"  name="txtnumber" class="form-control" id="staticName"  required ng-model="slMua">
+                                    
+                                <div class="row">
+
+                                    <a href="#!gioHang" ng-click="addGioHang()"><label for="" style="color: red;margin-top: 17px;">+ Thêm vào giỏ hàng</label></a>
+                                </div>
+                                </form>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <fieldset>
+                            <legend>Hàng liên quan</legend>
+
+                        </fieldset>
+                        <hr>
+
+                    </div>
+                    <div class="row product-relate">
+                        <div class="product2 col-md-2">
+                            <img src="./images2/aoKhac2.jpg" width="100%" alt="">
+                        </div>
+                        <div class="product2 col-md-2">
+                            <img src="./images2/aoNamBlack.jpg" width="100%" alt="">
+                        </div>
+                        <div class="product2 col-md-2">
+                            <img src="./images2/aoKhac3.jpg" width="100%" alt="">
+                        </div>
+                        <div class="product2 col-md-2">
+                            <img src="./images2/aoKhac4.jpg" width="100%" alt="">
+                        </div>
+                        <div class="product2 col-md-2">
+                            <img src="./images2/aoKhac5.jpg" width="100%" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3 jumbotron boder-prd">
+                <h5>Tổng quan sản phẩm</h5>
+                <p style="word-wrap: break-word;">
+                    Áo Polo Cá Sấu Thêu Chữ Ký là một loại áo polo cao cấp,
+                    nổi bật với đặc điểm thêu chữ ký, thường được gắn liền với thương hiệu Lacoste. Dưới đây là tổng
+                    quan về loại áo này:
+                    <a href="javascript:void(0)" id="documentation-link">Xem thêm</a>
+                <div id="documentation-content" class="hidden">
+                    <!-- Nội dung bạn muốn hiển thị khi nhấp vào liên kết -->
+                    <p><strong>1. Thiết Kế và Chất Liệu</strong>
+                        Thiết Kế: Áo Polo Cá Sấu Thêu Chữ Ký thường có thiết kế cổ điển với cổ áo bẻ và hàng nút cài.
+                        Logo hình cá sấu - biểu tượng của thương hiệu Lacoste - được thêu trên ngực trái.
+                        Chất Liệu: Được làm từ chất liệu cotton chất lượng cao, áo polo này mang lại cảm giác thoải mái,
+                        thoáng mát và thấm hút mồ hôi tốt. Một số dòng sản phẩm cao cấp có thể sử dụng vải piqué, tạo độ
+                        co giãn và bền bỉ hơn.
+                    </p>
+                    <p><strong>2. Đặc Điểm Nổi Bật</strong>
+                        Logo Thêu Chữ Ký: Điểm đặc biệt của áo là chữ ký thêu tinh xảo, thể hiện sự sang trọng và phong
+                        cách riêng biệt.
+                        Phong Cách: Phù hợp với nhiều hoàn cảnh, từ trang phục hàng ngày đến các sự kiện semi-formal. Áo
+                        Polo Cá Sấu Thêu Chữ Ký dễ dàng kết hợp với quần jeans, quần kaki, hoặc thậm chí là quần short
+                        để tạo nên vẻ ngoài lịch lãm nhưng vẫn năng động.</p>
+                    
+                    <p><strong>3. Cách Bảo Quản</strong>
+                        Giặt: Nên giặt bằng tay hoặc giặt máy ở chế độ nhẹ nhàng với nước lạnh để giữ màu sắc và độ bền
+                        của vải.
+                        Phơi: Tránh phơi dưới ánh nắng trực tiếp để không làm phai màu và giảm tuổi thọ của áo.
+                        Ủi: Nếu cần ủi, hãy ủi ở nhiệt độ thấp và tránh ủi trực tiếp lên logo thêu.</p>
+                </div>
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js.js"></script>
+</body>
+
+</html>
